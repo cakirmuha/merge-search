@@ -9,7 +9,7 @@ func contains(tokens []string, input string) bool {
 	return false
 }
 
-func CheckIfConcatenated(tokens []string, input string) bool {
+func CheckSingleString(tokens []string, input string) bool {
 	inputLen := len(input)
 	if inputLen == 0 {
 		return true
@@ -18,6 +18,7 @@ func CheckIfConcatenated(tokens []string, input string) bool {
 	visited := []int{-1}
 
 	for i := 0; i < inputLen; i++ {
+		// Check all substrings from the visited point
 		for j := len(visited) - 1; j >= 0; j-- {
 			if contains(tokens, input[visited[j]+1:i+1]) {
 				if i == inputLen-1 {

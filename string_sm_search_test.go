@@ -5,7 +5,7 @@ import (
 )
 
 // Test if the given string can be represented as a concatenation of any subset of tokens
-func TestSingleStringSearch(t *testing.T) {
+func TestCheckSingleString(t *testing.T) {
 	tests := []struct {
 		tokens []string
 		input  string
@@ -54,7 +54,7 @@ func TestSingleStringSearch(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := CheckIfConcatenated(test.tokens, test.input)
+		got := CheckSingleString(test.tokens, test.input)
 		if want, have := test.output, got; want != have {
 			t.Fatalf("#%v: expected %v elements; got: %v", i, want, have)
 		}
