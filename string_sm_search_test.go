@@ -62,7 +62,7 @@ func TestCheckSingleString(t *testing.T) {
 }
 
 // Test if long input strings can be represented as a concatenation of any subset of tokens
-/*func TestMultipleStringSearch(t *testing.T) {
+func TestCheckMultipleStrings(t *testing.T) {
 	tests := []struct {
 		tokens     []string
 		inputList  []string
@@ -81,7 +81,7 @@ func TestCheckSingleString(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		got := CheckInList(test.tokens, test.inputList)
+		got := CheckMultipleStrings(test.tokens, test.inputList)
 		if want, have := len(test.outputList), len(got); want != have {
 			t.Fatalf("#%v: expected %v elements; got: %v", i, want, have)
 		}
@@ -91,4 +91,4 @@ func TestCheckSingleString(t *testing.T) {
 			}
 		}
 	}
-}*/
+}
